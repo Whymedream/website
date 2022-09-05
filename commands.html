@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <title>Команды бота</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="shortcut icon" href="static/img/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta name="title" content="Yuki Discord">
+    <meta name="description" content="Yuki Discord">
+    <meta name="keywords" content="yuki bot, discord, дискорд, бот, bot, discord bot, Экономика">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Russian">
+    <script src="https://code.jquery.com/jquery-2.2.0.js" integrity="sha256-oYqpLeqZe9cetUDV+TFiBZHp3uJ+X4F5eLs4W6uSTSE=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><img src="static/img/logo.png" alt="" class="rounded" width="48" height="48"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="https://discord.com/api/oauth2/authorize?client_id=921486352195932212&permissions=8&scope=applications.commands%20bot" target="_blank">Пригласить бота</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="https://discord.gg/h74uYT9ewD" target="_blank">Поддержка</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link disabled" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Панель управления (скоро)</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+<body>
+
+<div class="jumbotron gradient title">
+<h1 class="display-4">Команды</h1>
+<p class="lead">Последнее обновление: 16 августа 2022 года</p>
+</div>
+<br>
+
+    <div class="container">
+        <section style="margin-top: 9%;">
+            <div class="row">
+                <div class="col-sm-6 my-1">
+                    <h2 class="fw-bold">Yuki Commands</h2>
+                    <p class="command-descreption">Привет! Здесь ты найдешь списки команд. Воспользуйся главным меню или поиском!</p>
+                    <p> ( ) - Обязательный аргумент<br>
+                    [ ] - Необязательный аргумент</p>
+                </div>
+                <div class="col-sm-6 my-1">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4050940490843957" crossorigin="anonymous"></script>
+                    <!-- banner -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:100%;height:90px"
+                         data-ad-client="ca-pub-4050940490843957"
+                         data-ad-slot="6770580457"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <div class="mt-4"></div>
+        <div class="row">
+            <div class="col-md-4 my-2">
+                <div class="card p-3">
+                    <h5>Выберите категорию команд</h5>
+                    <hr />
+                    <button onclick="active(this)" id="CategoryBtnAll" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class="fad fa-icons ttt"></i>&nbsp; Все Команды</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn0" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-gift ttt'></i>&nbsp; Экономика</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn1" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-globe-europe ttt'></i>&nbsp; Для администрации</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-hammer-war ttt'></i>&nbsp;&nbsp; Весёлые</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn3" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Настройки</button>
+                    
+                </div>
+            </div>
+            <div class="col-md-8 my-2">
+                <input type="text" class="w-100 search-box" oninput="search(this.value)" placeholder="Поиск" />
+                
+                    
+                        <div class="mt-4"></div>
+                    
+                    <div class="commands-section" id="Category0">
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="profile">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fprofile">
+                                            profile&nbsp; <span class="command-descreption">- Посмотреть профиль</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fprofile" class="accordion-collapse collapse" data-bs-parent="#profile">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                profile [@Пользователь]
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="casino">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcasino">
+                                            casino&nbsp; <span class="command-descreption">- Сыграть в казино</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fcasino" class="accordion-collapse collapse" data-bs-parent="#casino">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                casino (ставка)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="slots">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fslots">
+                                            slots&nbsp; <span class="command-descreption">- Сыграть в слоты</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fslots" class="accordion-collapse collapse" data-bs-parent="#slots">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    slots (ставка)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion accordion-flush mt-2" id="chance">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fchance">
+                                            chance&nbsp; <span class="command-descreption">- Отгадать число</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fchance" class="accordion-collapse collapse" data-bs-parent="#chance">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                chance (ставка)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="roulette">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#froulette">
+                                            roulette&nbsp; <span class="command-descreption">- Сыграть в рулетку</span>
+                                        </button>
+                                    </h2>
+                                    <div id="froulette" class="accordion-collapse collapse" data-bs-parent="#roulette">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                roulette (ставка)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="work">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fwork">
+                                            work&nbsp; <span class="command-descreption">- Пойти на работу</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fwork" class="accordion-collapse collapse" data-bs-parent="#work">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="coin">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcoin">
+                                            coin&nbsp; <span class="command-descreption">- Подбросить монетку</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fcoin" class="accordion-collapse collapse" data-bs-parent="#coin">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                coin (ставка)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="duel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fduel">
+                                            duel&nbsp; <span class="command-descreption">- Вызвать на дуэль</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fduel" class="accordion-collapse collapse" data-bs-parent="#duel">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                duel (@Пользователь) (ставка)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="accordion accordion-flush mt-2" id="crime">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcrime">
+                                            crime&nbsp; <span class="command-descreption">- Ограбить пользователя</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fcrime" class="accordion-collapse collapse" data-bs-parent="#crime">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                crime (@Пользователь)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="bonus">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbonus">
+                                            bonus&nbsp; <span class="command-descreption">- Получить ежедневный бонус</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbonus" class="accordion-collapse collapse" data-bs-parent="#bonus">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="pay">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpay">
+                                            pay&nbsp; <span class="command-descreption">- Передать валюту Комиссия 2%</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fpay" class="accordion-collapse collapse" data-bs-parent="#pay">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                pay (@Пользователь) (сумма)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="top">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ftop">
+                                            top&nbsp; <span class="command-descreption">- Топ 10 пользователей по балансу</span>
+                                        </button>
+                                    </h2>
+                                    <div id="ftop" class="accordion-collapse collapse" data-bs-parent="#top">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="btop">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbtop">
+                                            btop&nbsp; <span class="command-descreption">- Топ 10 пользователей по балансу банка</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbtop" class="accordion-collapse collapse" data-bs-parent="#btop">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="ytop">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fytop">
+                                            ytop&nbsp; <span class="command-descreption">- Топ 10 стримеров YukiTube</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fytop" class="accordion-collapse collapse" data-bs-parent="#ytop">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="shop">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fshop">
+                                            shop&nbsp; <span class="command-descreption">- Магазин ролей</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fshop" class="accordion-collapse collapse" data-bs-parent="#shop">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="dep">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fdep">
+                                            dep&nbsp; <span class="command-descreption">- Положить деньги в банк Комиссия 3%</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fdep" class="accordion-collapse collapse" data-bs-parent="#dep">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                dep (сумма)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="with">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fwith">
+                                            with&nbsp; <span class="command-descreption">- Взять деньги из банка</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fwith" class="accordion-collapse collapse" data-bs-parent="#with">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                with (сумма)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="promo">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpromo">
+                                            promo&nbsp; <span class="command-descreption">- Активировать промокод</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fpromo" class="accordion-collapse collapse" data-bs-parent="#promo">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                promo (название)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="buy-role">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbuy-role">
+                                            buy role&nbsp; <span class="command-descreption">- Купить роль</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbuy-role" class="accordion-collapse collapse" data-bs-parent="#buy-role">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                buy role (номер товара)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="sell-role">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsell-role">
+                                            sell-role&nbsp; <span class="command-descreption">- Продать роль</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fsell-role" class="accordion-collapse collapse" data-bs-parent="#sell-role">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                sell-role (@Роль)
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="stream">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fstream">
+                                            stream&nbsp; <span class="command-descreption">- Запустить стрим</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fstream" class="accordion-collapse collapse" data-bs-parent="#stream">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="buy-beer">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbuy-beer">
+                                            buy beer&nbsp; <span class="command-descreption"> - Купить пиво</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbuy-beer" class="accordion-collapse collapse" data-bs-parent="#buy-beer">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="buy-case">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbuy-case">
+                                            buy case&nbsp; <span class="command-descreption">- Купить кейс</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbuy-case" class="accordion-collapse collapse" data-bs-parent="#buy-case">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                buy case [количество]
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="open-case">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fopen-case">
+                                            open case&nbsp; <span class="command-descreption">- Открыть кейс</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fopen-case" class="accordion-collapse collapse" data-bs-parent="#open-case">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="buy-rod">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbuy-rod">
+                                            buy rob&nbsp; <span class="command-descreption">- Купить удочку</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbuy-rod" class="accordion-collapse collapse" data-bs-parent="#buy-rod">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="buy-lesky">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbuy-lesky">
+                                            buy lesky&nbsp; <span class="command-descreption">- Купить леску</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbuy-lesky" class="accordion-collapse collapse" data-bs-parent="#buy-lesky">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="buy-hook">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbuy-hook">
+                                            buy hook&nbsp; <span class="command-descreption">- Купить крючок</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbuy-hook" class="accordion-collapse collapse" data-bs-parent="#buy-hook">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="fishing">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ffishing">
+                                            fishing&nbsp; <span class="command-descreption">- Сходить на рыбалку</span>
+                                        </button>
+                                    </h2>
+                                    <div id="ffishing" class="accordion-collapse collapse" data-bs-parent="#fishing">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="sell-fish">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsell-fish">
+                                            sell fish&nbsp; <span class="command-descreption">- Продать рыбу</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fsell-fish" class="accordion-collapse collapse" data-bs-parent="#sell-fish">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                
+                    
+                    <div class="commands-section" id="Category1">
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="promo-create">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpromo-create">
+                                            promo create&nbsp; <span class="command-descreption">- Создать промокод</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fpromo-create" class="accordion-collapse collapse" data-bs-parent="#promo-create">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                promo create (название) (использований) (сумма)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="promo-delete">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpromo-delete">
+                                            promo delete&nbsp; <span class="command-descreption">- Удалить промокод</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fpromo-delete" class="accordion-collapse collapse" data-bs-parent="#promo-delete">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                promo delete (название)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="give">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fgive">
+                                            give&nbsp; <span class="command-descreption">- Накрутить валюту пользователю</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fgive" class="accordion-collapse collapse" data-bs-parent="#give">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                give (сумма) (@Пользователь)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="accordion accordion-flush mt-2" id="take">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ftake">
+                                            take&nbsp; <span class="command-descreption">- Забрать валюту у пользователя</span>
+                                        </button>
+                                    </h2>
+                                    <div id="ftake" class="accordion-collapse collapse" data-bs-parent="#take">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                take (сумма) (@Пользователь)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="takeb">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ftakeb">
+                                            takeb&nbsp; <span class="command-descreption">- Забрать валюту у пользователя</span>
+                                        </button>
+                                    </h2>
+                                    <div id="ftakeb" class="accordion-collapse collapse" data-bs-parent="#takeb">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                takeb (сумма) (@Пользователь)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="addrole">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faddrole">
+                                            addrole&nbsp; <span class="command-descreption">- Добавить роль в магазин ролей</span>
+                                        </button>
+                                    </h2>
+                                    <div id="faddrole" class="accordion-collapse collapse" data-bs-parent="#addrole">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                addrole (@Роль) (цена)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="delrole">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fdelrole">
+                                            delrole&nbsp; <span class="command-descreption">- Добавить роль в магазин ролей</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fdelrole" class="accordion-collapse collapse" data-bs-parent="#delrole">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                delrole (@Роль)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="reset">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#freset">
+                                            reset&nbsp; <span class="command-descreption">- Сбросить средства всех участников сервера</span>
+                                        </button>
+                                    </h2>
+                                    <div id="freset" class="accordion-collapse collapse" data-bs-parent="#reset">
+                                        <div class="accordion-body">
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                
+                    
+                    <div class="commands-section" id="Category2">
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="шар">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fшар">
+                                            шар&nbsp; <span class="command-descreption">- Всемогущий шар </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fшар" class="accordion-collapse collapse" data-bs-parent="#шар">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                шар (вопрос)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="kiss">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fkiss">
+                                            kiss&nbsp; <span class="command-descreption">- Поцеловать участника </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fkiss" class="accordion-collapse collapse" data-bs-parent="#kiss">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                kiss (@Пользователь)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="hug">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fhug">
+                                            hug&nbsp; <span class="command-descreption">- Обнять участника </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fhug" class="accordion-collapse collapse" data-bs-parent="#hug">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                hug (@Пользователь)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="accordion accordion-flush mt-2" id="cru">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcru">
+                                            cru&nbsp; <span class="command-descreption">- Грустить  </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fcru" class="accordion-collapse collapse" data-bs-parent="#cru">
+                                        <div class="accordion-body">
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="pat">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpat">
+                                            pat&nbsp; <span class="command-descreption">- Погладить участника </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fpat" class="accordion-collapse collapse" data-bs-parent="#pat">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                pat (@Пользователь)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="punch">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpunch">
+                                            punch&nbsp; <span class="command-descreption">- Ударить участника </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fpunch" class="accordion-collapse collapse" data-bs-parent="#punch">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                punch (@Пользователь)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="chat-bot-on">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fchat-bot-on">
+                                            chat-bot on&nbsp; <span class="command-descreption">- Включить чат бота </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fchat-bot-on" class="accordion-collapse collapse" data-bs-parent="#chat-bot-on">
+                                        <div class="accordion-body">
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="chat-bot-off">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fchat-bot-off">
+                                            chat-bot off&nbsp; <span class="command-descreption">- Отключить чат бота </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fchat-bot-off" class="accordion-collapse collapse" data-bs-parent="#chat-bot-off">
+                                        <div class="accordion-body">
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                
+                    
+                    <div class="commands-section" id="Category3">
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="set-prefix">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fset-prefix">
+                                            set-prefix&nbsp; <span class='command-descreption'>Сменить префикс</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fset-prefix" class="accordion-collapse collapse" data-bs-parent="#set-prefix">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                set-prefix (Префикс)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="set-currency">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fset-currency">
+                                            set-currency&nbsp; <span class='command-descreption'>- Изменить значок валюты </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fset-currency" class="accordion-collapse collapse" data-bs-parent="#set-currency">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                set-currency (эмодзи)
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="remove-currency">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fremove-currency">
+                                            remove-currency&nbsp; <span class='command-descreption'>- Изменить валюту сервера на начальную </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fremove-currency" class="accordion-collapse collapse" data-bs-parent="#remove-currency">
+                                        <div class="accordion-body">
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="moderator-add">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmoderator-add">
+                                            moderator add&nbsp; <span class='command-descreption'>- Изменить валюту сервера на начальную </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fmoderator-add" class="accordion-collapse collapse" data-bs-parent="#moderator-add">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                moderator add (@Роль)
+                                                
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="moderator-remove">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmoderator-remove">
+                                            moderator remove&nbsp; <span class='command-descreption'>- Удалить модератора </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fmoderator-remove" class="accordion-collapse collapse" data-bs-parent="#moderator-remove">
+                                        <div class="accordion-body">
+                                            <span>Примеры использования:</span> <br />
+                                            <span class="examples">
+                                                
+                                                moderator remove (@Роль)
+                                                
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <input id="commands" value="[{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-gift ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Экономика&#34;,&#34;commands&#34;:[&#34;profile&#34;,&#34;casino&#34;,&#34;slots&#34;,&#34;chance&#34;,&#34;roulette&#34;,&#34;work&#34;,&#34;coin&#34;,&#34;duel&#34;,&#34;crime&#34;,&#34;bonus&#34;,&#34;pay&#34;,&#34;top&#34;,&#34;btop&#34;,&#34;ytop&#34;,&#34;shop&#34;,&#34;dep&#34;,&#34;with&#34;,&#34;promo&#34;,&#34;buy-role&#34;,&#34;sell-role&#34;,&#34;stream&#34;,&#34;buy-beer&#34;,&#34;buy-case&#34;,&#34;open-case&#34;,&#34;buy-rod&#34;,&#34;buy-lesky&#34;,&#34;buy-hook&#34;,&#34;fishing&#34;,&#34;sell-fish&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-globe-europe ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Для администрации&#34;,&#34;commands&#34;:[&#34;promo-create&#34;,&#34;promo-delete&#34;,&#34;give&#34;,&#34;take&#34;,&#34;takeb&#34;,&#34;addrole&#34;,&#34;delrole&#34;,&#34;reset&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-hammer-war ttt&#39;&gt;&lt;/i&gt;&amp;nbsp;&amp;nbsp; Весёлые&#34;,&#34;commands&#34;:[&#34;шар&#34;,&#34;kiss&#34;,&#34;hug&#34;,&#34;cru&#34;,&#34;pat&#34;,&#34;punch&#34;,&#34;chat-bot-on&#34;,&#34;chat-bot-off&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fas fa-crown ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Настройки&#34;,&#34;commands&#34;:[&#34;set-prefix&#34;,&#34;set-currency&#34;,&#34;remove-currency&#34;,&#34;moderator-add&#34;,&#34;moderator-remove&#34;]}]" hidden />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/fontawesome/all.min.js"></script>
+    <script src="/js/animation.js"></script>
+    <script>
+        function active(elm){
+            document.getElementById("CategoryBtnAll").classList.remove("active");
+            
+                document.getElementById("CategoryBtn0").classList.remove("active");
+                document.getElementById("Category0").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn1").classList.remove("active");
+                document.getElementById("Category1").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn2").classList.remove("active");
+                document.getElementById("Category2").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn3").classList.remove("active");
+                document.getElementById("Category3").setAttribute("hidden", "");
+            
+            elm.classList.add("active");
+            if(elm.id.replace("CategoryBtn", "") == "All"){
+                
+                    document.getElementById("Category0").removeAttribute("hidden");
+                
+                    document.getElementById("Category1").removeAttribute("hidden");
+                
+                    document.getElementById("Category2").removeAttribute("hidden");
+                
+                    document.getElementById("Category3").removeAttribute("hidden");
+                
+            }else{
+                document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
+            }
+        }
+        document.getElementById("CategoryBtnAll").click();
+        function search(arg){
+            let commands = JSON.parse(document.getElementById("commands").value);
+            let cmds = [];
+            commands.forEach(category => {
+                category.commands.forEach(command => {
+                    cmds.push(command);
+                })
+            })
+            let existedCmds = cmds.filter(obj => obj.includes(arg.toLowerCase()));
+            cmds.forEach(cmd => {
+                document.getElementById(cmd).setAttribute("hidden", "");
+            })
+            existedCmds.forEach(cmd => {
+                document.getElementById(cmd).removeAttribute("hidden");
+            })
+        }
+    </script>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+<footer class="container">
+    <p class="float-right"><a href="terms.html#">Вернуться наверх</a></p>
+    <p> © 2020-2022 — Vinki · <a href="privacy.html">Политика конфиденциальности</a></p>
+    </footer>
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
